@@ -239,6 +239,22 @@ class Highlighter < Redcarpet::Render::HTML
         .gsub(/(\ *)?\/\/.*/, '<mark class="comment">\\0</mark>')
         .gsub(/(this|\${1,2}\w+)/, '<mark class="strong">\\0</mark>')
   end
+
+  def mustache(code)
+    code.gsub(/{{\!.*}}/, "<mark class='comment'>\\0</mark>")
+        .gsub(/{{ .* }}/, "<mark>\\0</mark>")
+  end
+
+  def jsx(code)
+    code.gsub(/{ \w+ }/, '<mark class="dom-text">\\0</mark>')
+        .gsub(/\/\*.*\*\//, '<mark class="comment">\\0</mark>')
+  end
+
+  def javascript_jsx(code)
+    javascript(code).gsub(/React\.DOM\.\w+/, '<mark class="dom-element">\\0</mark>')
+                    .gsub(/{[^:]*}/, '<mark class="dom-attr">\\0</mark>')
+                    .gsub(/userName/, '<mark class="dom-text">\\0</mark>')
+  end
 end
 
 class Builder
@@ -302,7 +318,7 @@ class Builder
   end
 
   def sections
-    @sections ||= ROOT.join('ioc.md').read
+    @sections ||= ROOT.join('react.md').read
       .split(/^##/).map.with_index do |text, index|
         index == 0 ? text : '##' + text
       end
@@ -331,7 +347,7 @@ end
 
 desc 'Build presentations all-in-one files'
 task :build => :clean do
-  html = ROOT.join('./build/ioc.html')
+  html = ROOT.join('./build/react.html')
   html.dirname.mkpath
   html.open('w') { |io| io << Builder.new(:standalone).to_html }
 end

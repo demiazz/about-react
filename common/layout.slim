@@ -7,11 +7,11 @@ html lang="ru"
     meta name="viewport" content="width=1274, user-scalable=no"
     - if development?
       link rel="stylesheet" href="/style.css"
-      link rel="stylesheet" href="/ioc.css"
+      link rel="stylesheet" href="/react.css"
     - else
       style
         = assets['style.css']
-        = assets['ioc.css']
+        = assets['react.css']
       = include_statistics
   body.list
     header.caption= caption
