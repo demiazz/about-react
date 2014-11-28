@@ -444,4 +444,4 @@ var Clicker = React.createClass({
 
 <h3 class="subtitle">Lightweight SVG icons for your web project</h3>
 
-<p class="link"><a href="http://evil-icons.io/">evil-icons.io</a></p>
+<p class="link"><a href="http://evil-icons.io?utm_source=spbfrontend-2014">evil-icons.io</a></p>
