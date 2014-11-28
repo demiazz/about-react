@@ -14,6 +14,8 @@
 1. Шаблонизация: вчера и сегодня
 2. React is...
 3. FLUX
+4. Вопросы
+5. Рекламная пауза
 
 ## *Часть 1* Шаблонизация: <br /> вчера и сегодня
 !type shout
@@ -235,6 +237,7 @@ DOM узлы связываются в единое DOM-дерево.
 - шаблон (комбинация нативного и виртуального DOM)
 - свойства и состояние
 - жизненный цикл
+- конечный автомат
 
 ## *React is...* Пример компонента
 !type is-default
@@ -401,16 +404,29 @@ var Clicker = React.createClass({
 !type shout
 !type is-centered
 
-## *Часть 3* FLUX
+## *Часть 3* Flux
 !type shout
 
-!image martian.png
+!type martian.png
+
+## *Flux* Диаграмма взаимодействия
+!type with-diagram
+
+!image flux-diagram.png
+
+## Полезное
+
+- Роман Дворнов (Avito): ["Как построить DOM"](http://www.slideshare.net/basisjs/dom-27356908)
+- Страница [React](http://facebook.github.io/react/index.html)
+- Страница [Flux](http://facebook.github.io/flux/docs/overview.html)
+- [ractive](http://www.ractivejs.org/) и [basis.js](http://basisjs.com/)
+- [Fluxxor](http://fluxxor.com/), [Reflux](https://github.com/spoike/refluxjs) и [DeLorean](https://github.com/deloreanjs/delorean)
 
 ## Вопросы
 !type with-em
 
-* Презентация: [demiazz.github.io/about-react](http://demiazz.github.io/about-react/)
-* [@demiazz](https://twitter.com/demiazz)
+- Презентация: [demiazz.github.io/about-react](http://demiazz.github.io/about-react/)
+- [@demiazz](https://twitter.com/demiazz)
 
 !image evilmartians.png
 
@@ -418,3 +434,14 @@ var Clicker = React.createClass({
 !type shout
 
 !image martian.png
+
+##
+!type evil-icons
+
+<p class="logo">
+!image evil-icons.png
+</p>
+
+<h3 class="subtitle">Lightweight SVG icons for your web project</h3>
+
+<p class="link"><a href="http://evil-icons.io/">evil-icons.io</a></p>
