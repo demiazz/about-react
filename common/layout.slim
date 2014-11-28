@@ -8,22 +8,18 @@ html lang="ru"
     - if development?
       link rel="stylesheet" href="/style.css"
       link rel="stylesheet" href="/react.css"
+      link rel="stylesheet" href="/fonts.css"
     - else
       style
+        = assets['fonts.css']
         = assets['style.css']
         = assets['react.css']
-      = include_statistics
   body.list
     header.caption= caption
 
     - slides.each_with_index do |slide, i|
       section.slide id=(i + 1) class=slide.types.join(' ')
         div= slide.html
-
-    - if development?
-      link rel="stylesheet" href="/fonts.css"
-    - else
-      style= assets['fonts.css']
 
     - if development?
       script src="/jquery.js"

@@ -8,6 +8,7 @@ gem 'compass-core'
 gem 'therubyracer'
 gem 'activesupport'
 gem 'evil-front-all'
+gem 'rails-sass-images'
 gem 'term-ansicolor'
 
 gem 'rails-assets-shower-core'

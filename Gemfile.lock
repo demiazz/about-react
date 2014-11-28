@@ -107,6 +107,7 @@ DEPENDENCIES
   evil-front-all
   rails-assets-shower-bright
   rails-assets-shower-core
+  rails-sass-images
   rake
   redcarpet
   sinatra
